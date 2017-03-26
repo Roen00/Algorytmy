@@ -57,7 +57,7 @@ object CountSort {
       *   B[C[A[i]]] <- A[i]
       *   C[A[i]] <- C[A[i]] - 1 */
     for {
-      i <- (0 until n).toList.reverse
+      i <- (0 until n).reverse
     } {
       B.update(C(A(i)) - 1, A(i))
       C.update(A(i), C(A(i)) - 1)
